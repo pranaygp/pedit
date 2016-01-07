@@ -7,8 +7,7 @@
 
   "browser_action": {
     "default_icon": "chrome-extension-square.png",
-    "default_popup": "popup.html",
-    "default_title": "Click here to edit page!"
+    "default_popup": "popup.html"
   },
   "permissions": [
     "activeTab",
