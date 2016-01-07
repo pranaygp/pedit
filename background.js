@@ -5,11 +5,10 @@ chrome.runtime.onInstalled.addListener(function() {
         // With a new rule ...
         chrome.declarativeContent.onPageChanged.addRules([
             {
-                // That fires when a page's URL contains a 'g' ...
+                // That fires when a page has pedit data attributes
                 conditions: [
                     new chrome.declarativeContent.PageStateMatcher({
-                        pageUrl: { urlContains: 'http://vichitr.com' },
-//                        pageUrl: { urlContains: '127.0.0.1' },
+                         css: ["[data-pedit]"]
                     })
                 ],
                 // And shows the extension's page action.

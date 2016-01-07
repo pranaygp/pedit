@@ -9,8 +9,8 @@
         "default_icon": "images/chrome-extension-square-grey.png"
     },
     "content_scripts": [ {
-        "js": [ "bower_components/jquery/dist/jquery.min.js","bower_components/firebase/firebase.js"],
-        "matches": [ "http://vichitr.com/*", "https://vichitr.com/*", "http://127.0.0.1:55306/*",  "https://127.0.0.1/*"]
+        "js": ["bower_components/jquery/dist/jquery.min.js","bower_components/firebase/firebase.js"],
+        "matches": [ "http://*/*", "https://*/*"]
     }],
     "background":{
         "scripts":["bower_components/jquery/dist/jquery.min.js","background.js"],

@@ -7,4 +7,4 @@ $("[data-pedit]").each(function(elemId){
     data[$(this).data("pedit")] = $(this).html();
 })
 
-dataHandle.update(data);
+dataHandle.child(document.location.href).update(data);
