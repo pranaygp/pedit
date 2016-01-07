@@ -1,16 +1,23 @@
 {
-  "manifest_version": 2,
+    "manifest_version": 2,
 
-  "name": "pedit",
-  "description": "This extension lets you edit Pedit enabled webpages.",
-  "version": "0.1",
+    "name": "pedit",
+    "description": "This extension lets you edit Pedit enabled webpages.",
+    "version": "0.1",
 
-  "page_action": {
-    "default_icon": "images/chrome-extension-square.png",
-    "default_popup": "popup.html"
-  },
-  "permissions": [
-    "activeTab",
-    "https://ajax.googleapis.com/"
-  ]
+    "page_action": {
+        "default_icon": "images/chrome-extension-square-grey.png"
+    },
+    "content_scripts": [ {
+        "js": [ "bower_components/jquery/dist/jquery.min.js","bower_components/firebase/firebase.js"],
+        "matches": [ "http://vichitr.com/*", "https://vichitr.com/*", "http://127.0.0.1:55306/*",  "https://127.0.0.1/*"]
+    }],
+    "background":{
+        "scripts":["bower_components/jquery/dist/jquery.min.js","background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "declarativeContent",
+        "activeTab"
+    ]
 }
