@@ -1,13 +1,14 @@
 {
   "manifest_version": 2,
 
-  "name": "Pedit",
+  "name": "pedit",
   "description": "This extension lets you edit Pedit enabled webpages.",
   "version": "0.1",
 
   "browser_action": {
     "default_icon": "chrome-extension-square.png",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_title": "Click here to edit page!"
   },
   "permissions": [
     "activeTab",
