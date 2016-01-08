@@ -1,7 +1,13 @@
 var dataHandle = new Firebase("http://pedit.firebaseio.com/");
 var extensionId = chrome.runtime.id;
-var url = document.location.href;
-url = url.replace(/\./g,'/');
+var url = u2k(document.location.hostname) + "/" + u2k(document.location.pathname.substr(1));
+function u2k(inputURL){
+    var url = inputURL;
+    url = url.replace(/\./g,'(dot)');
+    url = url.replace(/\//g,'(slash)');
+    return url;
+}
+
 var initial = true;
 
 $("body").append("<div id='pedit-overlay'></div>");
