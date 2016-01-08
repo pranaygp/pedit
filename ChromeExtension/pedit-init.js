@@ -1,8 +1,8 @@
 var dataHandle = new Firebase("http://pedit.firebaseio.com/");
+var extensionId = chrome.runtime.id;
 var url = document.location.href;
-var initial = true;
 url = url.replace(/\./g,'/');
-
+var initial = true;
 
 $("body").append("<div id='pedit-overlay'></div>");
 
@@ -19,7 +19,10 @@ $("#pedit-overlay")
     'transform':'translateX(-50%)',
     'padding':'5px',
     'z-index': 5000
-}).load("chrome-extension://lhpbefomeoachmoopciogifgdfmilfjl/popup.html", function(){
+}).load("chrome-extension://"+extensionId+"/popup.html", function(){
+    $("#pedit-body [data-extension-src]").each(function(){
+        $(this).prop("src", "chrome-extension://" + extensionId + "/" + $(this).data("extension-src"));
+    });
     $("#pedit-body").css({
         "font-family":" 'HelveticaNeue-Thin'",
         "font-size":" 14px",
