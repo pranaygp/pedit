@@ -8,7 +8,7 @@ chrome.runtime.onInstalled.addListener(function() {
                 // That fires when a page has pedit data attributes
                 conditions: [
                     new chrome.declarativeContent.PageStateMatcher({
-                         css: ["[data-pedit]"]
+                        css: ["[data-pedit]"]
                     })
                 ],
                 // And shows the extension's page action.
@@ -23,20 +23,19 @@ chrome.runtime.onInstalled.addListener(function() {
 
 var active = false;
 
-// background/event page
 chrome.pageAction.onClicked.addListener(function(tab) {
-    if(!active){
-        chrome.pageAction.setIcon({tabId: tab.id, path:"images/chrome-extension-square.png"});
-        active = true;
+if(!active){
+    chrome.pageAction.setIcon({tabId: tab.id, path:"images/chrome-extension-square.png"});
+    active = true;
 
-        chrome.tabs.executeScript({
-            file: 'pedit-init.js'
-        });
-    } else {
-        chrome.pageAction.setIcon({tabId: tab.id, path:"images/chrome-extension-square-grey.png"});
-        active = false;
-        chrome.tabs.executeScript({
-            file: 'pedit-save.js'
-        });
-    }
+    chrome.tabs.executeScript({
+        file: 'pedit-init.js'
+    });
+} else {
+    chrome.pageAction.setIcon({tabId: tab.id, path:"images/chrome-extension-square-grey.png"});
+    active = false;
+    chrome.tabs.executeScript({
+        file: 'pedit-save.js'
+    });
+}
 });

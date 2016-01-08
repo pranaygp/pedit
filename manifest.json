@@ -13,11 +13,12 @@
         "matches": [ "http://*/*", "https://*/*"]
     }],
     "background":{
-        "scripts":["bower_components/jquery/dist/jquery.min.js","background.js"],
+        "scripts":["bower_components/jquery/dist/jquery.min.js","bower_components/firebase/firebase.js","background.js"],
         "persistent": false
     },
     "permissions": [
         "declarativeContent",
         "activeTab"
-    ]
+    ],
+    "web_accessible_resources": ["popup.html", "popup.css", "bower_components/*","images/*"]
 }

@@ -1,0 +1,33 @@
+#pedit-body{
+    /* Password: */
+    font-family: 'HelveticaNeue-Thin';
+    font-size: 14px;
+    color: #000000;
+    line-height: 17px;
+}
+#pedit-body h1 {
+    /* Let’s get pedit set : */
+    margin-top: 12px;
+    font-family: HelveticaNeue-Thin;
+    font-size: 24px;
+    color: #1792FF;
+    line-height: 29px;
+    font-weight: 100;
+
+}
+#pedit-body div {
+    float: left;
+    margin: 10px;
+}
+#pedit-body label{
+    width: 108px;
+    text-align: right;
+    display: inline-block;
+}
+#pedit-body #login label {
+    width: 58px;
+}
+#pedit-body input{
+    margin-bottom: 8px;
+    padding: 4px;
+}
