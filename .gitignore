@@ -6,3 +6,4 @@ ChromeExtension/node_modules/
 .DS_Store
 *.crx
 pedit.pem
+*.zip
