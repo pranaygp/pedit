@@ -82,7 +82,7 @@ function setup_pedit_submit-functionality(){
     })
 }
 
-dataHandle.child(url).once("value", function(snapshot) {
+dataHandle.child(url).child("password").once("value", function(snapshot) {
     var data = snapshot.val();
     if(data == null){
         initial = true;
