@@ -65,8 +65,9 @@ function setupPeditSubmitFunctionality(){
                 var initialPassword = $(".pedit-password-field#initialPassword").val();
                 var confirmPassword = $(".pedit-password-field#confirmPassword").val();
                 if(initialPassword == confirmPassword){
-                    dataHandle.child(url).update({password:md5(initialPassword)});
-                    gotoConfirmationPage();
+                    var hash = md5(initialPassword);
+                    dataHandle.child(url).update({password:hash});
+                    confirmLogin(hash);
                 }
                 else{
                     alert("Passwords Don't Match");
@@ -74,8 +75,9 @@ function setupPeditSubmitFunctionality(){
             } else {
                 var password = $(".pedit-password-field#password").val();
                 dataHandle.child(url).child("password").once('value',function(snapshot){
-                    if(snapshot.val() == md5(password))
-                        gotoConfirmationPage();
+                    var hash = md5(password)
+                    if(snapshot.val() == hash)
+                        confirmLogin(hash);
                     else{
                         alert("Password isn't right");
                     }
@@ -102,7 +104,8 @@ dataHandle.child(url).child("password").once("value", function(snapshot) {
     alert("An error occurred. Please contact developer.");
 });
 
-function gotoConfirmationPage(){
+function confirmLogin(hash){
+    $("#pedit-overlay").append("<span id='pedit-auth' style='display:none;'>"+hash+"</span>");
     if(initial){
         $("#pedit-overlay #initialRun").hide();
         initial = false;
