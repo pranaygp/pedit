@@ -21,7 +21,7 @@ Run these commands to fetch required scripts
 
 ```bash
  $ bower install firebase
- $ bower install pedit
+ $ bower install pedit-cms
 ```
 
 Then, include the following code in your website
@@ -47,7 +47,7 @@ Download the [latest release][pedit-zip] and extract it into your site's source 
 Then, include the following code in your website
 
 ```html
- <script src="firebase.js"></script>
+ <script src="firebase.js"></script> //ignore this if you included the Firebase cdn
  <script src="pedit.js"></script>
 ```
 
