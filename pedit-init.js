@@ -52,7 +52,11 @@ $("#pedit-overlay")
         "width":"auto",
         "margin-bottom":" 8px",
         "padding":" 4px"
-    }).keypress(function(e){
+    });
+});
+
+function setup_pedit_submit-functionality(){
+    $("#pedit-body input").keypress(function(e){
         if(e.keyCode==13){
             if(initial){
                 var initialPassword = $(".pedit-password-field#initialPassword").val();
@@ -75,9 +79,8 @@ $("#pedit-overlay")
                 });
             }
         }
-    });
-
-});
+    })
+}
 
 dataHandle.child(url).once("value", function(snapshot) {
     var data = snapshot.val();
@@ -89,6 +92,7 @@ dataHandle.child(url).once("value", function(snapshot) {
         initial = false;
         $("#pedit-overlay #login").show();
     }
+    setup_pedit_submit-functionality();
     $("#pedit-overlay").fadeIn();
 }, function (errorObject) {
     console.log("The read failed: " + errorObject.code);
