@@ -9,11 +9,11 @@
         "default_icon": "images/chrome-extension-square-grey.png"
     },
     "content_scripts": [ {
-        "js": ["bower_components/jquery/dist/jquery.min.js","bower_components/firebase/firebase.js"],
+        "js": ["bower_components/jquery/dist/jquery.min.js","bower_components/firebase/firebase.js","md5.js"],
         "matches": [ "http://*/*", "https://*/*"]
     }],
     "background":{
-        "scripts":["bower_components/jquery/dist/jquery.min.js","bower_components/firebase/firebase.js","background.js"],
+        "scripts":["background.js"],
         "persistent": false
     },
     "permissions": [
