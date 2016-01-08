@@ -11,16 +11,19 @@ $("[data-pedit]").prop("contenteditable","false");
 var auth =$("#pedit-overlay #pedit-auth").html();
 $("#pedit-overlay").fadeOut().remove();
 
-var dataHandle = new Firebase("http://pedit.firebaseio.com/");
+if(auth != undefined){
 
-var data = {"password":auth};
-$("[data-pedit]").each(function(elemId){
-    data["content/" + $(this).data("pedit")] = $(this).html();
-})
+    var dataHandle = new Firebase("http://pedit.firebaseio.com/");
 
-dataHandle.child(url).update(data, function(error){
-    if(error){
-        alert("pedit was not authenticated properly.");
-        console.log(error);
-    }
-});
+    var data = {"password":auth};
+    $("[data-pedit]").each(function(elemId){
+        data["content/" + $(this).data("pedit")] = $(this).html();
+    })
+
+    dataHandle.child(url).update(data, function(error){
+        if(error){
+            alert("pedit was not authenticated properly.");
+            console.log(error);
+        }
+    });
+}
