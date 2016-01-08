@@ -1,9 +1,6 @@
 # https://git-scm.com/docs/gitignore
 # https://help.github.com/articles/ignoring-files
 # Example .gitignore files: https://github.com/github/gitignore
-ChromeExtension/bower_components/
-ChromeExtension/node_modules/
+bower_components/
+node_modules/
 .DS_Store
-*.crx
-pedit.pem
-*.zip

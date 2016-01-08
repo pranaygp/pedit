@@ -1,0 +1,26 @@
+{
+  "name": "pedit",
+  "homepage": "https://github.com/pranaygp/pedit",
+  "authors": [
+    "Pranay Prakash <pranay.gp@gmail.com>"
+  ],
+  "description": "Make website easy to edit using a chrome extension",
+  "main": "pedit.js",
+  "moduleType": [],
+  "keywords": [
+    "pedit",
+    "cms",
+    "static",
+    "site",
+    "developer",
+    "client"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
