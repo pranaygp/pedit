@@ -55,7 +55,7 @@ $("#pedit-overlay")
     });
 });
 
-function setup_pedit_submit-functionality(){
+function setupPeditSubmitFunctionality(){
     $("#pedit-body input").keypress(function(e){
         if(e.keyCode==13){
             if(initial){
@@ -92,7 +92,7 @@ dataHandle.child(url).child("password").once("value", function(snapshot) {
         initial = false;
         $("#pedit-overlay #login").show();
     }
-    setup_pedit_submit-functionality();
+    setupPeditSubmitFunctionality();
     $("#pedit-overlay").fadeIn();
 }, function (errorObject) {
     console.log("The read failed: " + errorObject.code);
