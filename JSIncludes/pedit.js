@@ -12,7 +12,7 @@ function u2k(inputURL){
 // Get a database reference to our posts
 var ref = new Firebase("http://pedit.firebaseio.com/");
 // Attach an asynchronous callback to read the data at our posts reference
-ref.child(host).child("content").child(path).on("value", function(snapshot) {
+ref.child(host).child("content").on("value", function(snapshot) {
     var peditData = snapshot.val();
     $("[data-pedit]").each(function(){
         $(this).html(peditData[$(this).data("pedit")]);
