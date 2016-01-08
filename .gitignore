@@ -4,3 +4,4 @@
 ChromeExtension/bower_components/
 ChromeExtension/node_modules/
 .DS_Store
+*.crx
