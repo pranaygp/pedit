@@ -1,6 +1,9 @@
 var dataHandle = new Firebase("http://pedit.firebaseio.com/");
 var extensionId = chrome.runtime.id;
-var url = u2k(document.location.hostname) + "/" + u2k(document.location.pathname.substr(1));
+
+var host = u2k(document.location.hostname);
+var path = u2k(document.location.pathname.substr(1));
+var url = host + "/" + path;
 function u2k(inputURL){
     var url = inputURL;
     url = url.replace(/\./g,'(dot)');
@@ -72,7 +75,7 @@ function setupPeditSubmitFunctionality(){
                 var confirmPassword = $(".pedit-password-field#confirmPassword").val();
                 if(initialPassword == confirmPassword){
                     var hash = md5(initialPassword);
-                    dataHandle.child(url).update({password:hash,"content/0":0}, function(error){
+                    dataHandle.child(host).update({password:hash,"initialized":true}, function(error){
                         if(error){
                             alert("Could not set new password!");
                             console.log(error);
@@ -88,7 +91,7 @@ function setupPeditSubmitFunctionality(){
                 var password = $(".pedit-password-field#password").val();
                 var hash = md5(password);
 
-                dataHandle.child(url).update({password:hash}, function(error){
+                dataHandle.child(host).update({password:hash}, function(error){
                     if(error){
                         alert("Password isn't right");
                         console.log(error);
@@ -110,9 +113,9 @@ function setupPeditSubmitFunctionality(){
     })
 }
 
-dataHandle.child(url).child("content").once("value", function(snapshot) {
+dataHandle.child(host).child("initialized").once("value", function(snapshot) {
     var data = snapshot.val();
-    if(data == null){
+    if(data == null || data == false){
         initial = true;
         $("#pedit-overlay #initialRun").show();
     }

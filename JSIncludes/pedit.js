@@ -1,4 +1,6 @@
-var url = u2k(document.location.hostname) + "/" + u2k(document.location.pathname.substr(1));
+var host = u2k(document.location.hostname);
+var path = u2k(document.location.pathname.substr(1));
+var url = host + "/" + path;
 function u2k(inputURL){
     var url = inputURL;
     url = url.replace(/\./g,'(dot)');
@@ -10,7 +12,7 @@ function u2k(inputURL){
 // Get a database reference to our posts
 var ref = new Firebase("http://pedit.firebaseio.com/");
 // Attach an asynchronous callback to read the data at our posts reference
-ref.child(url).child("content").on("value", function(snapshot) {
+ref.child(host).child("content").child(path).on("value", function(snapshot) {
     //  console.log(snapshot.val());
     var data = snapshot.val()
     for(var key in data){

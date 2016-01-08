@@ -1,4 +1,6 @@
-var url = u2k(document.location.hostname) + "/" + u2k(document.location.pathname.substr(1));
+var host = u2k(document.location.hostname);
+var path = u2k(document.location.pathname.substr(1));
+var url = host + "/" + path;
 function u2k(inputURL){
     var url = inputURL;
     url = url.replace(/\./g,'(dot)');
@@ -20,9 +22,9 @@ if(auth != undefined){
         data["content/" + $(this).data("pedit")] = $(this).html();
     })
 
-    dataHandle.child(url).update(data, function(error){
+    dataHandle.child(host).update(data, function(error){
         if(error){
-            alert("pedit was not authenticated properly.");
+            alert("pedit was not authenticated properly");
             console.log(error);
         }
     });
