@@ -9,7 +9,7 @@ It's as easy as 1, 2, 3...
 
 1. You use the `data-pedit` attribute in your html code on elements that you/your client might want to edit in the future. 
 2. When viewing the site on chrome with the [extension][extension], you'll see the pedit logo in your address bar. Hit it!
-3. Your website becomes magically editable (after authentucating you ofcourse). All changes made are saved (as a hidden bonus, changes are live and updates are pushed to everyone viewing your page in realtime)!
+3. Your website magically becomes editable (after authenticating you, ofcourse). All changes made are saved (as a hidden bonus, changes are live and updates are pushed to everyone viewing your page in realtime)!
 
 ## Installation
 
