@@ -1,6 +1,10 @@
 var host = u2k(document.location.hostname);
 function u2k(inputURL){
     var url = inputURL;
+    if(url.match(/^www\./))
+    {
+        url = url.substring(4);
+    }
     url = url.replace(/\./g,'(dot)');
     url = url.replace(/\//g,'(slash)');
     return url;
