@@ -1,6 +1,8 @@
 # pedit
 An easy way to make your websites editable! 
 
+![pedit in action!](http://g.recordit.co/tdLfLYW4Cf.gif)
+
 pedit helps you make the text on your site easily editable with the help of a [chrome extension][extension]. This could be helpful when you're making a website for a client who wants to keep their site updated, or if you just wanna easily edit the content on your own site without messing with html or pushing updates.
 
 pedit works by dynamically loading all pedit enabled text from Firebase. The 
