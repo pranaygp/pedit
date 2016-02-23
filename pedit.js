@@ -1,5 +1,5 @@
 if (typeof (Storage) !== "undefined") {
-    replaceDataInDOM(JSON.parse(localStorage.setItem("peditData")));
+    replaceDataInDOM(JSON.parse(localStorage.getItem("peditData")));
 }
 
 var host = u2k(document.location.hostname);
