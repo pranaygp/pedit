@@ -1,5 +1,5 @@
 if (typeof (Storage) !== "undefined") {
-    // Code for localStorage/sessionStorage.
+    replaceDataInDOM(JSON.parse(localStorage.setItem("peditData")));
 }
 
 var host = u2k(document.location.hostname);
@@ -43,6 +43,9 @@ var ref = new Firebase("http://pedit.firebaseio.com/");
 // Attach an asynchronous callback to read the data at our posts reference
 ref.child(host).child("content").on("value", function(snapshot) {
     replaceDataInDOM(snapshot.val());
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem("peditData", JSON.stringify(snapshot.val()));
+    }
 }, function (errorObject) {
     console.log("The read failed: " + errorObject.code);
 });
