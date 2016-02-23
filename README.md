@@ -15,6 +15,22 @@ It's as easy as 1, 2, 3...
 
 The current version requires you to have access to the Firebase SDK as a dependency
 
+### NPM installation
+
+Run these commands to fetch required scripts
+
+```bash
+ $ npm install firebase
+ $ npm install pedit-cms
+```
+
+Then, include the following code in your website
+
+```html
+ <script src="node_modules/firebase/lib/firebase-web.js"></script>
+ <script src="node_modules/pedit-cms/pedit.js"></script>
+```
+
 ### Bower installation
 
 Run these commands to fetch required scripts
