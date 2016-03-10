@@ -5,7 +5,7 @@ An easy way to make your websites editable!
 
 pedit helps you make the text on your site easily editable with the help of a [chrome extension][extension]. This could be helpful when you're making a website for a client who wants to keep their site updated, or if you just wanna easily edit the content on your own site without messing with html or pushing updates.
 
-pedit works by dynamically loading all pedit enabled text from Firebase. The 
+pedit works by dynamically loading all pedit enabled text from Firebase.
 
 It's as easy as 1, 2, 3...
 
@@ -15,49 +15,35 @@ It's as easy as 1, 2, 3...
 
 ## Installation
 
-The current version requires you to have access to the Firebase SDK as a dependency
-
 ### NPM installation
 
-Run these commands to fetch required scripts
+Run this command to fetch required scripts
 
 ```bash
- $ npm install firebase
  $ npm install pedit-cms
 ```
 
 Then, include the following code in your website
 
 ```html
- <script src="node_modules/firebase/lib/firebase-web.js"></script>
  <script src="node_modules/pedit-cms/pedit.js"></script>
 ```
 
 ### Bower installation
 
-Run these commands to fetch required scripts
+Run this command to fetch required scripts
 
 ```bash
- $ bower install firebase
  $ bower install pedit-cms
 ```
 
 Then, include the following code in your website
 
 ```html
- <script src="bower_components/firebase/firebase.js"></script>
  <script src="bower_components/pedit/pedit.js"></script>
 ```
 
 ### Source install
-
-#### Firebase 
-**Recommended**: Use the Firebase CDN:
-```html
- <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
-```
-
-Or, get the latest version of the `Firebase JS client library` from [here][firebase-client-library]
 
 #### pedit 
 Download the [latest release][pedit-zip] and extract it into your site's source directory.
@@ -65,7 +51,6 @@ Download the [latest release][pedit-zip] and extract it into your site's source 
 Then, include the following code in your website
 
 ```html
- <script src="firebase.js"></script> //ignore this if you included the Firebase cdn
  <script src="pedit.js"></script>
 ```
 
@@ -131,4 +116,3 @@ Pranay Prakash - [Personal Site](http://pranayprakash.co), [LinkedIn](http://lin
 
 [extension]: https://chrome.google.com/webstore/detail/pedit/adkanmbgbpddnlmijakakfajlcokkfje
 [pedit-zip]: https://github.com/pranaygp/pedit/archive/0.4.0.zip
-[firebase-client-library]:https://cdn.firebase.com/js/client/2.3.2/firebase.js
