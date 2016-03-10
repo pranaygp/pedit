@@ -23,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/pranaygp/pedit/issues"
   },
-  "homepage": "https://github.com/pranaygp/pedit#readme"
+  "homepage": "https://github.com/pranaygp/pedit#readme",
+  "devDependencies": {
+    "karma": "^0.13.22"
+  },
+  "dependencies": {
+    "firebase": "^2.4.1"
+  }
 }
