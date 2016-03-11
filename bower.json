@@ -24,6 +24,5 @@
     "tests"
   ],
   "devDependencies": {
-    "firebase": "^2.4.1"
   }
 }
