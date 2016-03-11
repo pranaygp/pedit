@@ -1,4 +1,4 @@
-# pedit [![Build Status](https://travis-ci.org/pranaygp/pedit.svg?branch=master)](https://travis-ci.org/pranaygp/pedit)
+# pedit [![Build Status](https://travis-ci.org/pranaygp/pedit.svg?branch=develop)](https://travis-ci.org/pranaygp/pedit)
 An easy way to make your websites editable! 
 
 ![pedit in action!](http://g.recordit.co/tdLfLYW4Cf.gif)
