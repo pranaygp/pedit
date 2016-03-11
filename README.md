@@ -26,7 +26,7 @@ Run this command to fetch required scripts
 Then, include the following code in your website
 
 ```html
- <script src="node_modules/pedit-cms/pedit.js"></script>
+ <script src="node_modules/pedit-cms/dist/pedit.js"></script>
 ```
 
 ### Bower installation
@@ -40,7 +40,7 @@ Run this command to fetch required scripts
 Then, include the following code in your website
 
 ```html
- <script src="bower_components/pedit/pedit.js"></script>
+ <script src="bower_components/pedit/dist/pedit.js"></script>
 ```
 
 ### Source install
