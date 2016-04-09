@@ -32,15 +32,16 @@
 
         <section id="main_content">
           <h1>
-<a id="pedit" class="anchor" href="#pedit" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>pedit</h1>
+<a id="pedit-" class="anchor" href="#pedit-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>pedit <a href="https://travis-ci.org/pranaygp/pedit"><img src="https://travis-ci.org/pranaygp/pedit.svg?branch=develop" alt="Build Status"></a>
+</h1>
 
 <p>An easy way to make your websites editable! </p>
 
-<p><img src="https://camo.githubusercontent.com/d0aad8bda1ffca6c06210c1c5edf2bacc5e23ff5/687474703a2f2f672e7265636f726469742e636f2f74644c664c59573443662e676966" alt="pedit in action!"></p>
+<p><img src="http://g.recordit.co/tdLfLYW4Cf.gif" alt="pedit in action!"></p>
 
 <p>pedit helps you make the text on your site easily editable with the help of a <a href="https://chrome.google.com/webstore/detail/pedit/adkanmbgbpddnlmijakakfajlcokkfje">chrome extension</a>. This could be helpful when you're making a website for a client who wants to keep their site updated, or if you just wanna easily edit the content on your own site without messing with html or pushing updates.</p>
 
-<p>pedit works by dynamically loading all pedit enabled text from Firebase. The </p>
+<p>pedit works by dynamically loading all pedit enabled text from Firebase.</p>
 
 <p>It's as easy as 1, 2, 3...</p>
 
@@ -53,55 +54,39 @@
 <h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
 
-<p>The current version requires you to have access to the Firebase SDK as a dependency</p>
-
 <h3>
 <a id="npm-installation" class="anchor" href="#npm-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>NPM installation</h3>
 
-<p>Run these commands to fetch required scripts</p>
+<p>Run this command to fetch required scripts</p>
 
-<div class="highlight highlight-source-shell"><pre> $ npm install firebase
- $ npm install pedit-cms</pre></div>
+<div class="highlight highlight-source-shell"><pre> $ npm install pedit-cms</pre></div>
 
 <p>Then, include the following code in your website</p>
 
-<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1"> &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>node_modules/firebase/lib/firebase-web.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
-<span class="pl-s1"> &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>node_modules/pedit-cms/pedit.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1"> &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>node_modules/pedit-cms/dist/pedit.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <h3>
 <a id="bower-installation" class="anchor" href="#bower-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bower installation</h3>
 
-<p>Run these commands to fetch required scripts</p>
+<p>Run this command to fetch required scripts</p>
 
-<div class="highlight highlight-source-shell"><pre> $ bower install firebase
- $ bower install pedit-cms</pre></div>
+<div class="highlight highlight-source-shell"><pre> $ bower install pedit-cms</pre></div>
 
 <p>Then, include the following code in your website</p>
 
-<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1"> &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bower_components/firebase/firebase.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
-<span class="pl-s1"> &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bower_components/pedit/pedit.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1"> &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bower_components/pedit/dist/pedit.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <h3>
 <a id="source-install" class="anchor" href="#source-install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Source install</h3>
 
 <h4>
-<a id="firebase" class="anchor" href="#firebase" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Firebase</h4>
-
-<p><strong>Recommended</strong>: Use the Firebase CDN:</p>
-
-<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1"> &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://cdn.firebase.com/js/client/2.3.2/firebase.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
-
-<p>Or, get the latest version of the <code>Firebase JS client library</code> from <a href="https://cdn.firebase.com/js/client/2.3.2/firebase.js">here</a></p>
-
-<h4>
-<a id="pedit-1" class="anchor" href="#pedit-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>pedit</h4>
+<a id="pedit" class="anchor" href="#pedit" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>pedit</h4>
 
 <p>Download the <a href="https://github.com/pranaygp/pedit/archive/0.4.0.zip">latest release</a> and extract it into your site's source directory.</p>
 
 <p>Then, include the following code in your website</p>
 
-<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1"> &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>firebase.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span> //ignore this if you included the Firebase cdn
-<span class="pl-s1"> &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>pedit.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1"> &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>pedit/dist/pedit.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
