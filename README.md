@@ -51,7 +51,7 @@ Download the [latest release][pedit-zip] and extract it into your site's source 
 Then, include the following code in your website
 
 ```html
- <script src="pedit.js"></script>
+ <script src="pedit/dist/pedit.js"></script>
 ```
 
 ## Usage
