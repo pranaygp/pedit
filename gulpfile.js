@@ -10,19 +10,23 @@ var babelOptions = {
 gulp.task('build', ['build-src', 'build-specs']);
 
 gulp.task('build-src', function() {
-	return gulp.src('./src/pedit.js')
+	return gulp.src('./src/*.js')
 		.pipe(babel(babelOptions))
 		.pipe(gulp.dest('./dist'))
-		.pipe(rename('pedit.min.js'))
+		.pipe(rename(function(path) {
+			path.extname = '.min.js';
+		}))
 		.pipe(uglify())
 		.pipe(gulp.dest('./dist'));
 });
 
 gulp.task('build-specs', function() {
-	return gulp.src('./specs/peditSpecs.js')
+	return gulp.src('./specs/*.js')
 		.pipe(babel(babelOptions))
 		.pipe(gulp.dest('./dist/specs'))
-		.pipe(rename('peditSpecs.min.js'))
+		.pipe(rename(function(path) {
+			path.extname = '.min.js';
+		}))
 		.pipe(uglify())
 		.pipe(gulp.dest('./dist/specs'));
 });
