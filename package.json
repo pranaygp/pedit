@@ -5,7 +5,8 @@
   "main": "dist/pedit.js",
   "scripts": {
     "test": "karma start --single-run --browsers PhantomJS",
-    "build": "gulp build"
+    "build": "gulp build",
+    "prepblish": "npm run build"
   },
   "repository": {
     "type": "git",
