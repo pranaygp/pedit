@@ -1,5 +1,5 @@
 # pedit [![Build Status](https://travis-ci.org/pranaygp/pedit.svg?branch=develop)](https://travis-ci.org/pranaygp/pedit)
-An easy way to make your websites editable! 
+An easy way to make your websites editable!
 
 ![pedit in action!](http://g.recordit.co/tdLfLYW4Cf.gif)
 
@@ -9,7 +9,7 @@ pedit works by dynamically loading all pedit enabled text from Firebase.
 
 It's as easy as 1, 2, 3...
 
-1. You use the `data-pedit` attribute in your html code on elements that you/your client might want to edit in the future. 
+1. You use the `data-pedit` attribute in your html code on elements that you/your client might want to edit in the future.
 2. When viewing the site on chrome with the [extension][extension], you'll see the pedit logo in your address bar. Hit it!
 3. Your website magically becomes editable (after authenticating you, ofcourse). All changes made are saved (as a hidden bonus, changes are live and updates are pushed to everyone viewing your page in realtime)!
 
@@ -45,7 +45,7 @@ Then, include the following code in your website
 
 ### Source install
 
-#### pedit 
+#### pedit
 Download the [latest release][pedit-zip] and extract it into your site's source directory.
 
 Then, include the following code in your website
@@ -56,7 +56,7 @@ Then, include the following code in your website
 
 ## Usage
 
-After installing the required js scripts and ensuring that you **included the js files for every page where you want to enable pedit**, 
+After installing the required js scripts and ensuring that you **included the js files for every page where you want to enable pedit**,
 
 Add the `data-pedit` attribute to any html element that you want to make editable. It's `value` should be an ID that you want to associate with that element.
 
@@ -115,4 +115,4 @@ Pranay Prakash - [Personal Site](http://pranayprakash.co), [LinkedIn](http://lin
 
 
 [extension]: https://chrome.google.com/webstore/detail/pedit/adkanmbgbpddnlmijakakfajlcokkfje
-[pedit-zip]: https://github.com/pranaygp/pedit/archive/0.4.0.zip
+[pedit-zip]: https://github.com/pranaygp/pedit/archive/0.6.0.zip

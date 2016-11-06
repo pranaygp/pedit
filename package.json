@@ -1,6 +1,6 @@
 {
   "name": "pedit-cms",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Make website easy to edit using a chrome extension",
   "main": "dist/pedit.js",
   "scripts": {
